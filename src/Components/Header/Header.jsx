@@ -20,7 +20,7 @@ export default function Header() {
                 setShowNav(false);
               }}
             >
-              <div className="icon top-0 right-0 absolute p-4">
+              <div className="icon top-0 right-0 absolute p-4 text-2xl">
                 <FaWindowClose />
               </div>
             </button>
@@ -30,7 +30,7 @@ export default function Header() {
                 setShowNav(true);
               }}
             >
-              <div className="icon top-0 right-0 absolute p-4">
+              <div className="icon top-0 right-0 absolute p-4 text-2xl">
                 <FaBars />
               </div>
             </button>
