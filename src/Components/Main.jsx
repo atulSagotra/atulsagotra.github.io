@@ -1,18 +1,28 @@
 import React, { useState, useEffect } from "react";
 import Header from "./Header/Header";
-import Profile from "./Profile";
+import Profile from "./Pages/Profile";
 
 export const AppContext = React.createContext();
+
+export const Pages = {
+  Profile: 0,
+  Skills: 1,
+  Experience: 2,
+  Education: 3,
+};
 
 export default function Main() {
   const [isMobile, setIsMobile] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
+  const [currentPage, setCurrentPage] = useState(Pages.Profile);
 
   const myContext = {
     appUI: {
       isDesktop: isDesktop,
       isMobile: isMobile,
     },
+    currentPage: currentPage,
+    setCurrentPage: setCurrentPage,
   };
 
   useEffect(() => {
@@ -28,7 +38,6 @@ export default function Main() {
     window.addEventListener("resize", handleresize);
     handleresize();
   }, []);
-
   return (
     <div>
       <div className={isDesktop ? `flex flex-row` : ``}>

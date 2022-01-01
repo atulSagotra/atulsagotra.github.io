@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { AppContext } from "./Main";
+import { AppContext } from "../Main";
 
 export default function Profile() {
   const {
