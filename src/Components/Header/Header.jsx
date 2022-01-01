@@ -1,18 +1,32 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import Icon from "./Icon";
 import { AppContext, Pages } from "../Main";
-import { FaUserAlt, FaWindowClose, FaBriefcase, FaBars } from "react-icons/fa";
+import {
+  FaUserAlt,
+  FaWindowClose,
+  FaBriefcase,
+  FaBars,
+  FaGraduationCap,
+} from "react-icons/fa";
 
 export default function Header() {
-  const [showNav, setShowNav] = useState(false);
   const {
     appUI: { isDesktop, isMobile },
     currentPage,
+    showNav,
+    setShowNav,
   } = useContext(AppContext);
+
   return (
-    <div className={isDesktop ? `grid grid-rows h-screen text-center` : ``}>
-      <div className="p-2 mt-2">
-        <div className="">logo</div>
+    <div
+      className={
+        isDesktop
+          ? `grid grid-rows h-screen text-center header shadow-lg `
+          : `header shadow-lg`
+      }
+    >
+      <div className="">
+        <div className={isMobile ? "pt-4 pl-4" : "pt-4"}>logo</div>
         {isMobile &&
           (showNav ? (
             <button
@@ -43,12 +57,21 @@ export default function Header() {
             info="Profile"
             selected={currentPage === Pages.Profile}
             action={Pages.Profile}
+            route={"/profile"}
           />
           <Icon
             iconLogo={<FaBriefcase />}
             info="Skills"
             selected={currentPage === Pages.Skills}
             action={Pages.Skills}
+            route={"/skills"}
+          />
+          <Icon
+            iconLogo={<FaGraduationCap />}
+            info="Education"
+            selected={currentPage === Pages.Education}
+            action={Pages.Education}
+            route={"/education"}
           />
         </div>
       )}
