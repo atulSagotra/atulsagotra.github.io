@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import Icon from "./Icon";
 import { AppContext, Pages } from "../Main";
+import { useNavigate } from "react-router-dom";
 import {
   FaUserAlt,
   FaWindowClose,
@@ -10,6 +11,7 @@ import {
 } from "react-icons/fa";
 
 export default function Header() {
+  const navigate = useNavigate();
   const {
     appUI: { isDesktop, isMobile },
     currentPage,
@@ -26,7 +28,16 @@ export default function Header() {
       }
     >
       <div className="">
-        <div className={isMobile ? "pt-4 pl-4" : "pt-4"}>logo</div>
+        <div
+          className={
+            isMobile ? "pt-4 pl-4 cursor-pointer" : "pt-4 cursor-pointer"
+          }
+          onClick={() => {
+            navigate("/");
+          }}
+        >
+          logo
+        </div>
         {isMobile &&
           (showNav ? (
             <button
@@ -57,7 +68,7 @@ export default function Header() {
             info="Profile"
             selected={currentPage === Pages.Profile}
             action={Pages.Profile}
-            route={"/profile"}
+            route={"/"}
           />
           <Icon
             iconLogo={<FaBriefcase />}

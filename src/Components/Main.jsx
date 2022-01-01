@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import Header from "./Header/Header";
 import Profile from "./Pages/Profile";
 import { Routes, Route } from "react-router-dom";
+import Education from "./Pages/Education";
+import Skills from "./Pages/Skills";
 
 export const AppContext = React.createContext();
 
@@ -49,8 +51,8 @@ export default function Main() {
           <Header />
           <Routes>
             <Route exact path="/" element={<Profile />} />
-            <Route exact path="/profile" element={<Profile />} />
-            <Route exact path="/education" element={<h1>Hello World</h1>} />
+            <Route path="/skills" element={<Skills />} />
+            <Route path="/education" element={<Education />} />
           </Routes>
         </AppContext.Provider>
       </div>

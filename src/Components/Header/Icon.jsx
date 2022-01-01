@@ -19,7 +19,7 @@ export default function Icon(props) {
   };
   return (
     <div
-      className={`p-1 m-1 ${
+      className={`p-1 m-1 cursor-pointer ${
         props.selected
           ? isDesktop
             ? "selected_icon_desktop"
