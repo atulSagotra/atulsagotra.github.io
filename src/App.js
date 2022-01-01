@@ -1,24 +1,8 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Main from "./Components/Main";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-         Hi there, I will be Atul Sagotra's Super awesome Portfolio
-        </p>
-        <a
-          className="App-link"
-          href="https://www.linkedin.com/in/atulsagotra/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Atul Sagotra
-        </a>
-      </header>
-    </div>
-  );
+  return <Main />;
 }
-
 export default App;
