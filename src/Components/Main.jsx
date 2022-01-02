@@ -33,7 +33,7 @@ export default function Main() {
 
   useEffect(() => {
     function handleresize() {
-      if (window.innerWidth < 720) {
+      if (window.innerWidth < 600) {
         setIsMobile(true);
         setIsDesktop(false);
       } else {

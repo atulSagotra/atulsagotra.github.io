@@ -19,6 +19,7 @@ export default function Header() {
     currentPage,
     showNav,
     setShowNav,
+    setCurrentPage,
   } = useContext(AppContext);
 
   return (
@@ -36,6 +37,8 @@ export default function Header() {
           }
           onClick={() => {
             navigate("/");
+            setCurrentPage(Pages.Profile);
+            setShowNav(false);
           }}
         >
           <img src={logo_name_white} alt="logo" className="w-20" />
@@ -46,7 +49,7 @@ export default function Header() {
               showNav ? setShowNav(false) : setShowNav(true);
             }}
           >
-            <div className="icon top-0 right-0 absolute pt-12 pr-8 text-2xl">
+            <div className="icon top-0 right-0 absolute pt-10 pr-4 text-2xl">
               {showNav ? <FaWindowClose /> : <FaBars />}
             </div>
           </button>
