@@ -4,6 +4,7 @@ import Profile from "./Pages/Profile";
 import { Routes, Route } from "react-router-dom";
 import Education from "./Pages/Education";
 import Skills from "./Pages/Skills";
+import Experience from "./Pages/Experience";
 
 export const AppContext = React.createContext();
 
@@ -21,6 +22,7 @@ export default function Main() {
   const [currentPage, setCurrentPage] = useState(Pages.Profile);
 
   const scrollPageApp = true;
+
   const myContext = {
     appUI: {
       isDesktop: isDesktop,
@@ -51,8 +53,9 @@ export default function Main() {
     function handleScroll() {
       let value = window.scrollY;
       if (value < 500) setCurrentPage(Pages.Profile);
-      else if (value > 500 && value < 1000) setCurrentPage(Pages.Skills);
-      else if (value > 1000 && value < 1500) setCurrentPage(Pages.Education);
+      else if (value > 500 && value < 1000) setCurrentPage(Pages.Experience);
+      else if (value > 1000 && value < 1500) setCurrentPage(Pages.Skills);
+      else if (value > 1500 && value < 2000) setCurrentPage(Pages.Education);
     }
     window.addEventListener("scroll", handleScroll);
     handleScroll();
@@ -77,6 +80,7 @@ export default function Main() {
           ) : (
             <div className={isDesktop ? "ml-20 pl-2" : ""}>
               <Profile />
+              <Experience />
               <Skills />
               <Education />
             </div>

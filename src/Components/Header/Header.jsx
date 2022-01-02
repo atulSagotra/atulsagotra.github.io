@@ -8,6 +8,7 @@ import {
   FaUserAlt,
   FaWindowClose,
   FaBars,
+  FaBriefcase,
   FaGraduationCap,
 } from "react-icons/fa";
 import { HiLightBulb } from "react-icons/hi";
@@ -63,6 +64,13 @@ export default function Header() {
             selected={currentPage === Pages.Profile}
             action={Pages.Profile}
             route={""}
+          />
+          <Icon
+            iconLogo={<FaBriefcase />}
+            info="Experience"
+            selected={currentPage === Pages.Experience}
+            action={Pages.Experience}
+            route={"experience"}
           />
           <Icon
             iconLogo={<HiLightBulb className="text-xl" />}

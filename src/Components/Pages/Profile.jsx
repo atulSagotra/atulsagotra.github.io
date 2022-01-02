@@ -8,7 +8,7 @@ export default function Profile() {
     appUI: { isDesktop, isMobile },
   } = useContext(AppContext);
   return (
-    <div id="profile" className="page">
+    <div id="profile" className="page bg-black-900">
       <div
         className={`${
           isDesktop && "flex flex-row"

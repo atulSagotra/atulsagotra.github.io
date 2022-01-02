@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Skills() {
   return (
-    <div id = "skills" className="page">
+    <div className="page bg-gray-700">
       <header className="App-header">
         <p>I will be displaying Atul's Skills info here</p>
         <a

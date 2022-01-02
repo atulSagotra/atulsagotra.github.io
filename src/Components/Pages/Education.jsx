@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Education() {
   return (
-    <div id="education" className="page">
+    <div id="education" className="page bg-gray-600 ">
       <header className="App-header">
         <p>I will be displaying Atul's Education info here</p>
         <a
