@@ -2,6 +2,8 @@ import React, { useContext } from "react";
 import { AppContext } from "../Main";
 import profile_photo from "../../Static/Images/profile_photo.png";
 import TypeWriter from "./Effects/TypeWriter";
+import ContactUs from "./Effects/ContactUs";
+import Social from "./Effects/Social";
 
 export default function Profile() {
   const {
@@ -11,12 +13,12 @@ export default function Profile() {
     <div id="profile" className="page bg-black-900">
       <div
         className={`${
-          isDesktop && "flex flex-row"
+          isDesktop && "flex flex-row justify-center"
         } opal-bg p-2 rounded-xl drop-shadow-2xl shadow-black`}
       >
         <div
           className={`${
-            isMobile ? "w-1/2" : "w-1/4"
+            isMobile ? "w-1/2" : "w-1/5"
           } drop-shadow-2xl shadow-black`}
         >
           <img
@@ -25,15 +27,15 @@ export default function Profile() {
             className="rounded-full border-8"
           />
         </div>
-        <div className="self-center p-4">
+        <div className="self-center p-6">
           <h1 className="text-4xl font-mono font-bold">Atul Sagotra</h1>
           <TypeWriter
-            heading={"I am "}
+            heading={"I"}
             messages={[
-              "Software Engineer.",
-              "Web Developer.",
-              "Creator of this portfolio.",
-              "Proud Indian.",
+              "am Software Engineer.",
+              "am Web Developer.",
+              "created this website.",
+              "am Proud Indian.",
             ]}
           />
         </div>
@@ -56,6 +58,7 @@ export default function Profile() {
           developing UI/UX, Front-end applications, micro-frontend applications,
           Product development, Git and many more technologies.
         </p>
+        <Social />
       </div>
     </div>
   );
