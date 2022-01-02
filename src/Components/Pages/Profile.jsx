@@ -8,7 +8,7 @@ export default function Profile() {
     appUI: { isDesktop, isMobile },
   } = useContext(AppContext);
   return (
-    <div className="page">
+    <div id="profile" className="page">
       <div
         className={`${
           isDesktop && "flex flex-row"
@@ -43,7 +43,12 @@ export default function Profile() {
           Hi I am Atul Sagotra, a 23 year old Web Developer living in Jammu
           (Jammu and Kashmir), India. I am Computer Science Engineer, currently
           working with awesome folks at&nbsp;
-          <a href="https://www.xoriant.com/" target="_blank" rel="noreferrer">
+          <a
+            href="https://www.xoriant.com/"
+            target="_blank"
+            rel="noreferrer"
+            className="underline"
+          >
             {"Xoriant"}
           </a>
           . I am innovative Software Enginer having 2 years of expertise in

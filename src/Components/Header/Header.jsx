@@ -7,10 +7,10 @@ import logo_name_white from "../../Static/Images/logo_name_white.png";
 import {
   FaUserAlt,
   FaWindowClose,
-  FaBriefcase,
   FaBars,
   FaGraduationCap,
 } from "react-icons/fa";
+import { HiLightBulb } from "react-icons/hi";
 
 export default function Header() {
   const navigate = useNavigate();
@@ -26,7 +26,7 @@ export default function Header() {
     <div
       className={
         isDesktop
-          ? `grid grid-rows h-screen text-center black-bg shadow-lg `
+          ? `grid grid-rows h-screen text-center black-bg shadow-lg`
           : `black-bg shadow-lg`
       }
     >
@@ -62,21 +62,21 @@ export default function Header() {
             info="Profile"
             selected={currentPage === Pages.Profile}
             action={Pages.Profile}
-            route={"/"}
+            route={""}
           />
           <Icon
-            iconLogo={<FaBriefcase />}
+            iconLogo={<HiLightBulb className="text-xl" />}
             info="Skills"
             selected={currentPage === Pages.Skills}
             action={Pages.Skills}
-            route={"/skills"}
+            route={"skills"}
           />
           <Icon
             iconLogo={<FaGraduationCap />}
             info="Education"
             selected={currentPage === Pages.Education}
             action={Pages.Education}
-            route={"/education"}
+            route={"education"}
           />
         </div>
       )}

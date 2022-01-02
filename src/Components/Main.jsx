@@ -20,10 +20,12 @@ export default function Main() {
   const [showNav, setShowNav] = useState(false);
   const [currentPage, setCurrentPage] = useState(Pages.Profile);
 
+  const scrollPageApp = true;
   const myContext = {
     appUI: {
       isDesktop: isDesktop,
       isMobile: isMobile,
+      scrollPageApp: scrollPageApp,
     },
     showNav: showNav,
     setShowNav: setShowNav,
@@ -44,16 +46,41 @@ export default function Main() {
     window.addEventListener("resize", handleresize);
     handleresize();
   }, []);
+
+  useEffect(() => {
+    function handleScroll() {
+      let value = window.scrollY;
+      if (value < 500) setCurrentPage(Pages.Profile);
+      else if (value > 500 && value < 1000) setCurrentPage(Pages.Skills);
+      else if (value > 1000 && value < 1500) setCurrentPage(Pages.Education);
+    }
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+  }, []);
+
   return (
     <>
       <div className={isDesktop ? `flex flex-row` : ``}>
         <AppContext.Provider value={myContext}>
-          <Header />
-          <Routes>
-            <Route exact path="/" element={<Profile />} />
-            <Route path="/skills" element={<Skills />} />
-            <Route path="/education" element={<Education />} />
-          </Routes>
+          <div className={scrollPageApp && isDesktop ? "fixed" : ""}>
+            <Header />
+          </div>
+
+          {!scrollPageApp ? (
+            <>
+              <Routes>
+                <Route exact path="/" element={<Profile />} />
+                <Route path="/skills" element={<Skills />} />
+                <Route path="/education" element={<Education />} />
+              </Routes>
+            </>
+          ) : (
+            <div className={isDesktop ? "ml-20 pl-2" : ""}>
+              <Profile />
+              <Skills />
+              <Education />
+            </div>
+          )}
         </AppContext.Provider>
       </div>
     </>

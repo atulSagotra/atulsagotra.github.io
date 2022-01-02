@@ -15,9 +15,10 @@ export default function Icon(props) {
       setShowNav(false);
     }
     setCurrentPage(props.action);
-    navigate(props.route);
+    navigate("/"+props.route);
   };
   return (
+    <a href={"#"+props.route} id="icon">
     <div
       className={`p-1 m-1 cursor-pointer ${
         props.selected ? (isDesktop ? "opal" : "opal-bg") : ""
@@ -30,5 +31,6 @@ export default function Icon(props) {
       <p className="">{props.info}</p>
       {!props.selected && isMobile ? <hr className="mb-1"></hr> : null}
     </div>
+    </a>
   );
 }
