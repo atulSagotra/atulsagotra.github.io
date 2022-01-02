@@ -5,17 +5,29 @@ body {
 .icon {
   text-align: -webkit-center;
 }
-.selected_icon_desktop {
-  color: #f05454;
+.charcol {
+  color: #30475e;
 }
-.selected_icon_mobile {
+.opal {
+  color: #f05454 !important;
+}
+.black {
+  color: #121212;
+}
+.cultured {
+  color: #f5f5f5;
+}
+.charcol-bg {
+  background-color: #30475e;
+}
+.opal-bg {
   background-color: #f05454;
 }
-.underline {
-  border-width: 1px;
-}
-.header {
+.black-bg {
   background-color: #121212;
+}
+.cultured-bg {
+  background-color: #f5f5f5;
 }
 .page {
   height: auto;

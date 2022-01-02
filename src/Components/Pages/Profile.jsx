@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { AppContext } from "../Main";
+import profile_photo from "../../Static/Images/profile_photo.png";
 
 export default function Profile() {
   const {
@@ -7,17 +8,15 @@ export default function Profile() {
   } = useContext(AppContext);
   return (
     <div className="page">
-      <header className="App-header">
-        <p>Hi there, I will be Atul Sagotra's Super awesome Portfolio</p>
-        <a
-          className="App-link"
-          href="https://www.linkedin.com/in/atulsagotra/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Atul Sagotra
-        </a>
-      </header>
+      <div className="grid-cols">
+        <div className={isMobile ? "w-1/2" : "w-1/4"}>
+          <img
+            src={profile_photo}
+            alt="profile"
+            className="rounded-full border-8"
+          />
+        </div>
+      </div>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { AppContext } from "../Main";
 import { useNavigate } from "react-router-dom";
+import { colors } from "@material-ui/core";
 
 export default function Icon(props) {
   const navigate = useNavigate();
@@ -20,11 +21,7 @@ export default function Icon(props) {
   return (
     <div
       className={`p-1 m-1 cursor-pointer ${
-        props.selected
-          ? isDesktop
-            ? "selected_icon_desktop"
-            : "selected_icon_mobile"
-          : ""
+        props.selected ? (isDesktop ? "opal" : "opal-bg") : ""
       }`}
       onClick={handleIconClick}
     >
@@ -32,10 +29,8 @@ export default function Icon(props) {
         <div className={`icon px-2 text-2xl`}>{props.iconLogo}</div>
       ) : null}
       <p className="">{props.info}</p>
-      {!props.selected && isMobile ? <hr className="mt-1"></hr> : null}
-      {props.selected && isDesktop ? (
-        <hr className="underline mx-2"></hr>
-      ) : null}
+      {!props.selected && isMobile ? <hr className="mb-1"></hr> : null}
+      {props.selected && isDesktop ? <hr className="border mx-2"></hr> : null}
     </div>
   );
 }

@@ -2,6 +2,8 @@ import React, { useContext } from "react";
 import Icon from "./Icon";
 import { AppContext, Pages } from "../Main";
 import { useNavigate } from "react-router-dom";
+import logo_name_white from "../../Static/Images/logo_name_white.png";
+// import profile_photo from "../../Static/Images/profile_photo.png"
 import {
   FaUserAlt,
   FaWindowClose,
@@ -23,46 +25,35 @@ export default function Header() {
     <div
       className={
         isDesktop
-          ? `grid grid-rows h-screen text-center header shadow-lg `
-          : `header shadow-lg`
+          ? `grid grid-rows h-screen text-center black-bg shadow-lg `
+          : `black-bg shadow-lg`
       }
     >
       <div className="">
         <div
           className={
-            isMobile ? "pt-4 pl-4 cursor-pointer" : "pt-4 cursor-pointer"
+            isMobile ? "pt-4 pl-4 cursor-pointer" : "pt-4 cursor-pointer icon"
           }
           onClick={() => {
             navigate("/");
           }}
         >
-          logo
+          <img src={logo_name_white} alt="logo" className="w-20" />
         </div>
-        {isMobile &&
-          (showNav ? (
-            <button
-              onClick={() => {
-                setShowNav(false);
-              }}
-            >
-              <div className="icon top-0 right-0 absolute p-4 text-2xl">
-                <FaWindowClose />
-              </div>
-            </button>
-          ) : (
-            <button
-              onClick={() => {
-                setShowNav(true);
-              }}
-            >
-              <div className="icon top-0 right-0 absolute p-4 text-2xl">
-                <FaBars />
-              </div>
-            </button>
-          ))}
+        {isMobile && (
+          <button
+            onClick={() => {
+              showNav ? setShowNav(false) : setShowNav(true);
+            }}
+          >
+            <div className="icon top-0 right-0 absolute pt-12 pr-8 text-2xl">
+              {showNav ? <FaWindowClose /> : <FaBars />}
+            </div>
+          </button>
+        )}
       </div>
       {(showNav || isDesktop) && (
-        <div className="icons place-self-end mb-2">
+        <div className="icons place-self-end mb-2 pb-2">
           <Icon
             iconLogo={<FaUserAlt />}
             info="Profile"
