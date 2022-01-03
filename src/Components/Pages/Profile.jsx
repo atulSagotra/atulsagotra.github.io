@@ -11,12 +11,12 @@ export default function Profile() {
     <div id="profile" className="page bg-black-900">
       <div
         className={`${
-          isDesktop && "flex flex-row justify-center h-1/2"
+          isDesktop && "flex flex-row justify-center h-3/5"
         } opal-bg p-2 rounded-xl drop-shadow-2xl shadow-black`}
       >
         <div
           className={`${
-            isMobile ? "w-1/2" : "w-1/5"
+            isMobile ? "w-1/2" : "w-1/4"
           } drop-shadow-2xl shadow-black self-center`}
         >
           <img
@@ -39,8 +39,7 @@ export default function Profile() {
         </div>
       </div>
       <div className="p-2">
-        <br/>
-        <h1 className="text-3xl font-bold font-mono text-left">About</h1>
+        <h1 className="text-3xl font-bold font-mono text-left pt-4">About</h1>
         <p className="text-justify">
           Hi I am Atul Sagotra, a 23 year old Web Developer living in Jammu
           (Jammu and Kashmir), India. I am Computer Science Engineer, currently
@@ -58,8 +57,7 @@ export default function Profile() {
           developing UI/UX, Front-end applications, micro-frontend applications,
           Product development, Git and many more technologies.
         </p>
-        <br/>
-        <h1 className="text-3xl font-bold font-mono text-left">Education</h1>
+        <h1 className="text-3xl font-bold font-mono text-left pt-4">Education</h1>
         <p className="text-justify">
           I have pursued Bachelor of Technology in Computer Science Engineering
           from&nbsp;
