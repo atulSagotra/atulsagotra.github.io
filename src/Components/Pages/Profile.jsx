@@ -39,6 +39,7 @@ export default function Profile() {
         </div>
       </div>
       <div className="p-2">
+        <h1 className="text-3xl font-bold font-mono">About</h1>
         <p className="text-justify">
           Hi I am Atul Sagotra, a 23 year old Web Developer living in Jammu
           (Jammu and Kashmir), India. I am Computer Science Engineer, currently
@@ -55,6 +56,19 @@ export default function Profile() {
           Front-end application development with in-depth knowledge of
           developing UI/UX, Front-end applications, micro-frontend applications,
           Product development, Git and many more technologies.
+        </p>
+        <h1 className="text-3xl font-bold font-mono">Education</h1>
+        <p className="text-justify">
+          I have pursued Bachelor of Technology in Computer Science Engineering
+          from&nbsp;
+          <a
+            href="https://www.cgc.edu.in/"
+            target="_blank"
+            rel="noreferrer"
+            className="underline"
+          >
+            {"Chandigarh Group of Colleges"}
+          </a>.
         </p>
       </div>
     </div>
