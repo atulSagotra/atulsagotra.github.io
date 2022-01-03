@@ -11,13 +11,13 @@ export default function Profile() {
     <div id="profile" className="page bg-black-900">
       <div
         className={`${
-          isDesktop && "flex flex-row justify-center"
+          isDesktop && "flex flex-row justify-center h-1/2"
         } opal-bg p-2 rounded-xl drop-shadow-2xl shadow-black`}
       >
         <div
           className={`${
             isMobile ? "w-1/2" : "w-1/5"
-          } drop-shadow-2xl shadow-black`}
+          } drop-shadow-2xl shadow-black self-center`}
         >
           <img
             src={profile_photo}
