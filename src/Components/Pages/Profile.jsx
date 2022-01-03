@@ -2,8 +2,6 @@ import React, { useContext } from "react";
 import { AppContext } from "../Main";
 import profile_photo from "../../Static/Images/profile_photo.png";
 import TypeWriter from "./Effects/TypeWriter";
-import ContactUs from "./Effects/ContactUs";
-import Social from "./Effects/Social";
 
 export default function Profile() {
   const {
@@ -58,7 +56,6 @@ export default function Profile() {
           developing UI/UX, Front-end applications, micro-frontend applications,
           Product development, Git and many more technologies.
         </p>
-        <Social />
       </div>
     </div>
   );

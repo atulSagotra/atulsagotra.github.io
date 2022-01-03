@@ -2,9 +2,10 @@ import React, { useState, useEffect } from "react";
 import Header from "./Header/Header";
 import Profile from "./Pages/Profile";
 import { Routes, Route } from "react-router-dom";
-import Education from "./Pages/Education";
 import Skills from "./Pages/Skills";
 import Experience from "./Pages/Experience";
+import Contact from "./Pages/Contact";
+import Social from "./Pages/Effects/Social";
 
 export const AppContext = React.createContext();
 
@@ -12,7 +13,7 @@ export const Pages = {
   Profile: 0,
   Skills: 1,
   Experience: 2,
-  Education: 3,
+  Contact: 3,
 };
 
 export default function Main() {
@@ -55,7 +56,7 @@ export default function Main() {
       if (value < 500) setCurrentPage(Pages.Profile);
       else if (value > 500 && value < 1000) setCurrentPage(Pages.Experience);
       else if (value > 1000 && value < 1500) setCurrentPage(Pages.Skills);
-      else if (value > 1500 && value < 2000) setCurrentPage(Pages.Education);
+      else if (value > 1500 && value < 2000) setCurrentPage(Pages.Contact);
     }
     window.addEventListener("scroll", handleScroll);
     handleScroll();
@@ -73,8 +74,9 @@ export default function Main() {
             <>
               <Routes>
                 <Route exact path="/" element={<Profile />} />
+                <Route path="/skills" element={<Experience />} />
                 <Route path="/skills" element={<Skills />} />
-                <Route path="/education" element={<Education />} />
+                <Route path="/contact" element={<Contact />} />
               </Routes>
             </>
           ) : (
@@ -82,9 +84,11 @@ export default function Main() {
               <Profile />
               <Experience />
               <Skills />
-              <Education />
+              <Contact />
             </div>
           )}
+
+          <Social />
         </AppContext.Provider>
       </div>
     </>

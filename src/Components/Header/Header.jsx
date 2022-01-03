@@ -3,20 +3,14 @@ import Icon from "./Icon";
 import { AppContext, Pages } from "../Main";
 import { useNavigate } from "react-router-dom";
 import logo_name_white from "../../Static/Images/logo_name_white.png";
-// import profile_photo from "../../Static/Images/profile_photo.png"
-import {
-  FaUserAlt,
-  FaWindowClose,
-  FaBars,
-  FaBriefcase,
-  FaGraduationCap,
-} from "react-icons/fa";
+import { FaUserAlt, FaWindowClose, FaBars, FaBriefcase } from "react-icons/fa";
 import { HiLightBulb } from "react-icons/hi";
+import { MdContactMail } from "react-icons/md";
 
 export default function Header() {
   const navigate = useNavigate();
   const {
-    appUI: { isDesktop, isMobile },
+    appUI: { isDesktop, isMobile, scrollPageApp },
     currentPage,
     showNav,
     setShowNav,
@@ -37,12 +31,16 @@ export default function Header() {
             isMobile ? "pt-4 pl-4 cursor-pointer" : "pt-4 cursor-pointer icon"
           }
           onClick={() => {
-            navigate("/");
+            if (!scrollPageApp) {
+              navigate("/");
+            }
             setCurrentPage(Pages.Profile);
             setShowNav(false);
           }}
         >
-          <img src={logo_name_white} alt="logo" className="w-20" />
+          <a href="#profile">
+            <img src={logo_name_white} alt="logo" className="w-20" />
+          </a>
         </div>
         {isMobile && (
           <button
@@ -80,11 +78,11 @@ export default function Header() {
             route={"skills"}
           />
           <Icon
-            iconLogo={<FaGraduationCap />}
-            info="Education"
-            selected={currentPage === Pages.Education}
-            action={Pages.Education}
-            route={"education"}
+            iconLogo={<MdContactMail />}
+            info="Contact"
+            selected={currentPage === Pages.Contact}
+            action={Pages.Contact}
+            route={"contact"}
           />
         </div>
       )}
