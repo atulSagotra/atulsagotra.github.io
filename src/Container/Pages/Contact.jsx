@@ -1,38 +1,20 @@
-import React, { useState, useContext } from "react";
-import emailjs from "emailjs-com";
-import { AppContext } from "../Main";
-import logo_name_white from "../../Static/Images/logo_name_white.png";
+import React, { useState, useContext } from "react"
+import { AppContext } from "../Main"
+import logo_name_white from "../../Static/Images/logo_name_white.png"
+import keys from "../emailKeys"
+import axios from "axios"
+import { showNotification } from "../Components/ShowNotification"
+import { ToastContainer } from "react-toastify"
 
 export default function Contact() {
   const {
     appUI: { isDesktop },
   } = useContext(AppContext);
 
-  function sendEmail(e) {
-    emailjs
-      .sendForm(
-        "service_oz0d2cf",
-        "template_610b4ob",
-        e.target,
-        "user_j0mKGOrbbp5aRN01HkfLi"
-      )
-      .then(
-        () => {
-          console.log("Form Submitted");
-        },
-        (error) => {
-          window.alert(
-            "Sorry Your couldn't be send due to " +
-              error.text +
-              " Please try again"
-          );
-        }
-      );
-  }
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    phone: "",
+    phone_number: "",
     message: "",
   });
 
@@ -45,8 +27,29 @@ export default function Contact() {
     }
   };
 
+  function sendEmail(e) {
+    e.preventDefault()
+    const data = {
+      service_id: keys.SERVICE_ID,
+      template_id: keys.TEMPLATE_ID,                                                                                               
+      user_id: keys.PUBLIC_KEY,
+      template_params: {
+        ...formData
+      }
+    }
+    axios.post('https://api.emailjs.com/api/v1.0/email/send/', {
+      ...data
+    }).then((response) => {
+      console.log(response)
+      showNotification('success', 'Your Message has been Successfully Sent')
+    }).catch((error) => {
+      showNotification('error', error.message)
+    });
+  }
+
   return (
     <div id="contact" className="h-1/5 p-6 bg-gray-600">
+        <ToastContainer />
       <div className="text-4xl font-mono font-bold">Contact Me</div>
       <p className="text-justify py-2">
         Get in touch, to discuss innovative ideas or to work on awesome
@@ -67,7 +70,6 @@ export default function Contact() {
                 className="rounded-md p-2 black"
                 type="text"
                 name="name"
-                value={formData.name}
                 onChange={(e) => handleFieldChange("name", e.target.value)}
               />
             </div>
@@ -81,19 +83,30 @@ export default function Contact() {
                 name="email"
                 placeholder="Email"
                 className="rounded-md p-2 black"
-                value={formData.email}
                 onChange={(e) => handleFieldChange("email", e.target.value)}
               />
             </div>
           </div>
           <div className="flex flex-col py-1">
+          <div
+              className={isDesktop ? "flex flex-col w-1/2" : "flex flex-col"}
+            >
+              <label>Contact Number</label>
+              <input
+                required
+                type="number"
+                name="phone_number"
+                placeholder="Phone Number"
+                className="rounded-md p-2 black"
+                onChange={(e) => handleFieldChange("phone_number", e.target.value)}
+              />
+            </div>
             <label>Message</label>
             <textarea
               required
               name="message"
               placeholder="Enter Your Message"
               className="rounded-md p-2 black"
-              value={formData.message}
               onChange={(e) => handleFieldChange("message", e.target.value)}
             />
           </div>

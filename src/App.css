@@ -35,3 +35,6 @@ body {
     padding: 16px;
   }
 }
+.skillbar-percent {
+  color: #121212 !important;
+}
