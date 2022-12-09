@@ -45,17 +45,14 @@ export default function Profile() {
           (Jammu and Kashmir), India. I am Computer Science Engineer, currently
           working with awesome folks at&nbsp;
           <a
-            href="https://www.xoriant.com/"
+            href="https://pasarpolis.io/en"
             target="_blank"
             rel="noreferrer"
             className="underline"
           >
-            {"Xoriant"}
+            {"Pasarpolis"}
           </a>
-          . I am innovative Software Enginer having 2 years of expertise in
-          Front-end application development with in-depth knowledge of
-          developing UI/UX, Front-end applications, micro-frontend applications,
-          Product development, Git and many more technologies.
+          . I am Front End Developer with 3 years of experience working with JavaScript frameworks to deliver exceptional mobile friendly customer experiences. Experience working in both startup and MNC environments. A strong expertise in building reusable codes, components which can be used across different applications. Good understanding and experience working with micro frontends.
         </p>
         <h1 className="text-3xl font-bold font-mono text-left pt-4">Education</h1>
         <p className="text-justify">
