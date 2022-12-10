@@ -8,7 +8,7 @@ export default function Social() {
   } = useContext(AppContext);
   return (
     <div
-      className={isDesktop ? "fixed right-0 bottom-0 my-4 p-4" : "pr-6 pb-6"}
+      className={isDesktop ? "fixed right-0 bottom-0 my-4 p-4" : "pr-6 pb-6 background-primary"}
     >
       <div className="text-right text-xl font-sans font-bold pr-6">
         Find me on:

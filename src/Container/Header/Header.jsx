@@ -21,8 +21,8 @@ export default function Header() {
     <div
       className={
         isDesktop
-          ? `grid grid-rows h-screen text-center black-bg shadow-lg`
-          : `black-bg shadow-lg`
+          ? `grid grid-rows h-screen text-center blue-bg shadow-lg`
+          : `blue-bg shadow-lg`
       }
     >
       <div className="">

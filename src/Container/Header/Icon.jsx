@@ -22,8 +22,8 @@ export default function Icon(props) {
   return (
     <a href={"#" + props.route  }>
       <div
-        className={`p-1 m-1 cursor-pointer ${
-          props.selected ? (isDesktop ? "opal" : "opal-bg") : ""
+        className={`p-1 m-1 cursor-pointer text-white ${
+          props.selected ? (isDesktop ? "opal" : "black-bg") : ""
         }`}
         onClick={handleIconClick}
       >

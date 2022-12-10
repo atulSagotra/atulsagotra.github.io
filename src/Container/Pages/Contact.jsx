@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react"
 import { AppContext } from "../Main"
-import logo_name_white from "../../Static/Images/logo_name_white.png"
+import logo_name_black from "../../Static/Images/logo_name_black.png"
 import keys from "../emailKeys"
 import axios from "axios"
 import { showNotification } from "../Components/ShowNotification"
@@ -48,7 +48,7 @@ export default function Contact() {
   }
 
   return (
-    <div id="contact" className="h-1/5 p-6 bg-gray-600">
+    <div id="contact" className="h-1/5 p-6 background-primary">
         <ToastContainer />
       <div className="text-4xl font-mono font-bold">Contact Me</div>
       <p className="text-justify py-2">
@@ -67,7 +67,7 @@ export default function Contact() {
               <input
                 required
                 placeholder="Name"
-                className="rounded-md p-2 black"
+                className="rounded-md p-2"
                 type="text"
                 name="name"
                 onChange={(e) => handleFieldChange("name", e.target.value)}
@@ -82,7 +82,7 @@ export default function Contact() {
                 type="email"
                 name="email"
                 placeholder="Email"
-                className="rounded-md p-2 black"
+                className="rounded-md p-2"
                 onChange={(e) => handleFieldChange("email", e.target.value)}
               />
             </div>
@@ -97,7 +97,7 @@ export default function Contact() {
                 type="number"
                 name="phone_number"
                 placeholder="Phone Number"
-                className="rounded-md p-2 black"
+                className="rounded-md p-2"
                 onChange={(e) => handleFieldChange("phone_number", e.target.value)}
               />
             </div>
@@ -113,14 +113,14 @@ export default function Contact() {
           <div className={isDesktop ? "w-1/3 py-1" : "py-1"}>
             <input
               type="submit"
-              className="opal-bg rounded-lg text-2xl p-2 shadow-xl w-full mt-1"
+              className="blue-bg text-white rounded-lg text-2xl p-2 shadow-xl w-full mt-1"
               value="Send"
             />
           </div>
         </form>
         <div className="lg:block hidden w-1/2 pl-40">
           <img
-            src={logo_name_white}
+            src={logo_name_black}
             alt="logo"
             className="w-3/5 shadow-4xl rounded-full"
           />
