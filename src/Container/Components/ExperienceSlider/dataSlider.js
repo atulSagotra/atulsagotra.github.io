@@ -9,7 +9,7 @@ const dataSlider = [
     about: `Indonesia's first and leading Insurance Technology (Insurtech) companies with a strong focus on microinsurance.With over 40+ insurance partners, making insurance easily accessible.`,
     logo: 'https://storage.googleapis.com/pp_img/website/pp-logo-yellow-cap.png',
     website_url: 'https://pasarpolis.io/',
-    website_text: 'pasarpolis.io/'
+    website_text: 'pasarpolis.io'
   },
   {
     id: uuidv4(),

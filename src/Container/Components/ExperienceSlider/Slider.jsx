@@ -3,10 +3,22 @@ import './Slider.css'
 import BtnSlider from './BtnSlider'
 import dataSlider from './dataSlider'
 import ExperienceCard from './ExperienceCard'
+// import { useEffect } from 'react'
 
 export default function Slider() {
 
     const [slideIndex, setSlideIndex] = useState(1)
+
+    // useEffect(() => {
+    //     setTimeout(()=> {
+    //         if(slideIndex !== dataSlider.length){
+    //             setSlideIndex(slideIndex + 1)
+    //         } 
+    //         else if (slideIndex === dataSlider.length){
+    //             setSlideIndex(1)
+    //         }
+    //     }, 3000)
+    // }, [slideIndex])
 
     const nextSlide = () => {
         if(slideIndex !== dataSlider.length){

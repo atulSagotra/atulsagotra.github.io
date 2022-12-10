@@ -48,7 +48,7 @@ export default function Header() {
               showNav ? setShowNav(false) : setShowNav(true);
             }}
           >
-            <div className="icon top-0 right-0 absolute pt-10 pr-4 text-2xl">
+            <div className="icon top-0 right-0 absolute pt-10 pr-4 text-2xl text-white">
               {showNav ? <FaWindowClose /> : <FaBars />}
             </div>
           </button>

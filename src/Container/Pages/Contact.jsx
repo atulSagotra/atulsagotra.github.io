@@ -110,7 +110,7 @@ export default function Contact() {
               onChange={(e) => handleFieldChange("message", e.target.value)}
             />
           </div>
-          <div className={isDesktop ? "w-1/3 py-1" : "py-1"}>
+          <div className={isDesktop ? "w-1/3 py-4" : "py-4"}>
             <input
               type="submit"
               className="blue-bg text-white rounded-lg text-2xl p-2 shadow-xl w-full mt-1"
