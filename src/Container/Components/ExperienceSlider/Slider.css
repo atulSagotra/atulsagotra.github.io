@@ -17,6 +17,9 @@
     .display-flex {
       display: flex;
     }
+    .company_logo {
+      margin-right: 4rem;
+    }
   }
   .active-anim {
     opacity: 1;
@@ -49,7 +52,6 @@
     transform: translateY(-60%);
   }
   
-  
   .container-dots {
     position: absolute;
     bottom: 10px;
@@ -73,5 +75,7 @@
     border-radius: 20px;
     padding: 20px;
     box-shadow: 0 10px 20px rgb(0 0 0 / 20%);
-    
+  }
+  .company_logo img {
+    height: 80px;
   }

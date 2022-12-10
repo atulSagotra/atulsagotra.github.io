@@ -1,5 +1,5 @@
 import React from "react";
-import { ImProfile } from "react-icons/im";
+import { FaFileDownload } from "react-icons/fa";
 import Skillbar from 'react-skillbars'
 
 export default function Skills() {
@@ -97,7 +97,7 @@ export default function Skills() {
     <div id="skills" className="page">
       <h1 className="text-3xl font-bold font-mono text-left py-4">Functional Expertise</h1>
       <div className="flex pt-2">
-        <ol  className="list-disc ml-6">
+        <ol  className="list-disc ml-6 text-left">
           <li>HTML, CSS, JS & JS frameworks(ReactJS, NextJS)</li>
           <li>Developing Mobile Friendly & Web UI apps</li>
           <li>Strong Analytical & Problem Solving</li>
@@ -111,12 +111,12 @@ export default function Skills() {
         <div className="flex pt-2">
           <p>Click to View or Download Resume</p>
           <a
-            className="App-link text-lg pl-4"
+            className="App-link text-lg pl-2"
             href="https://drive.google.com/file/d/1ukxbs24lipSdZjhBgOQi60AJLc2yxYZS/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
           >
-          <ImProfile />
+          <FaFileDownload />
           </a>
         </div>
     </div>
