@@ -1,24 +1,30 @@
 body {
-  background-color: #475569;
-  color: #f5f5f5;
+  background-color: #ffffff;
+  color: #516a8e;
 }
 .icon {
   text-align: -webkit-center;
 }
+.background-primary {
+  background-color: #d9e2f0;
+}
 .opal {
-  color: #f05454 !important;
+  color: #000000 !important;
 }
 .black {
-  color: #121212;
+  color: #fae5df;
 }
 .white {
   color: #f5f5f5;
 }
 .opal-bg {
-  background-color: #f05454;
+  background-color: #a8c2ef;
 }
 .black-bg {
-  background-color: #121212;
+  background-color: #000000;
+}
+.blue-bg {
+  background-color: #124E8C;
 }
 .white-bg {
   background-color: #f5f5f5;
@@ -28,7 +34,7 @@ body {
   width: -webkit-fill-available;
   padding: 24px;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 870px) {
   .page {
     height: auto;
     text-align: -webkit-center;

@@ -11,8 +11,8 @@ export const AppContext = React.createContext();
 
 export const Pages = {
   Profile: 0,
-  Skills: 1,
-  Experience: 2,
+  Experience: 1,
+  Skills: 2,
   Contact: 3,
 };
 

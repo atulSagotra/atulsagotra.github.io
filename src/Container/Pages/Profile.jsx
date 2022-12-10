@@ -25,7 +25,7 @@ export default function Profile() {
             className="rounded-full border-8"
           />
         </div>
-        <div className="self-center p-6">
+        <div className="self-center p-6 text-black">
           <h1 className="text-4xl font-mono font-bold">Atul Sagotra</h1>
           <TypeWriter
             heading={"I"}

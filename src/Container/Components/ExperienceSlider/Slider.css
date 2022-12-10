@@ -1,12 +1,7 @@
 .container-slider {
-    height: 100%;
+    height: 94vh;
     position: relative;
     overflow: hidden;
-  }
-  @media screen and (max-width: 700px){
-    .container-slider {
-      margin: 100px 10px 0;
-    }
   }
   .slide {
     width: -webkit-fill-available;
@@ -14,12 +9,15 @@
     position: absolute;
     opacity: 0;
     transition: opacity ease-in-out 0.4s;
-    box-shadow: 0 10px 20px rgb(0 0 0 / 20%);
-    background-color:red;
     margin-bottom: 40px;
     padding: 30px;
   }
 
+  @media only screen and (min-width: 600px) {
+    .display-flex {
+      display: flex;
+    }
+  }
   .active-anim {
     opacity: 1;
   }
@@ -44,11 +42,6 @@
     top: 50%;
     left: 2px;
     transform: translateY(-60%);
-    -webkit-transform:rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    transform: rotate(180deg);
   }
   .next {
     top: 50%;
@@ -73,5 +66,12 @@
     background: #f1f1f1;
   }
   .dot.active {
-    background: rgb(32, 32, 32);
+    background: #516a8e;
+  }
+  .company_logo {
+    border: 2px solid #516a8e;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgb(0 0 0 / 20%);
+    
   }
