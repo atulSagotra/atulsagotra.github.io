@@ -75,7 +75,7 @@ const dataSlider = [
         `UnderWent the technical mentorship programme the understanding of the various different phases involved in the development to the maintenance of the Software application.`
       ],
       [
-        `HTML, CSS, JS & JS frameworks(ReactJS)`,
+        `HTML, CSS, JS and JS frameworks(ReactJS)`,
         `Gained expertise in turning UI/UX designs into prototypes, Creating excellent interactions from designs, writing the reusable content, modules and the maintainability of the code.`
       ]
     ]
