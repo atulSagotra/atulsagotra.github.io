@@ -112,7 +112,7 @@ export default function Skills() {
           <p>Click to View or Download Resume</p>
           <a
             className="App-link text-lg pl-2"
-            href="https://drive.google.com/file/d/1ukxbs24lipSdZjhBgOQi60AJLc2yxYZS/view?usp=sharing"
+            href="https://drive.google.com/file/d/1SMWUJuDXfYiwqEbUkrsMZKpY7z_vnVUD/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
           >
