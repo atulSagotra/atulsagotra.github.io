@@ -1,8 +1,8 @@
 {
-  "name": "atulsagotra.github.io",
+  "name": "atulsagotra.io",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://atulsagotra.github.io/",
+  "homepage": "https://atulsagotra.io/",
   "dependencies": {
     "@material-ui/core": "^4.12.3",
     "@testing-library/jest-dom": "^5.16.1",
