@@ -19,6 +19,7 @@ body {
 }
 .opal-bg {
   background-color: #a8c2ef;
+  text-align: -webkit-center;
 }
 .black-bg {
   background-color: #000000;
