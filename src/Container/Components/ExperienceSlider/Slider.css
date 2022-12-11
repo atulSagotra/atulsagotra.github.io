@@ -1,7 +1,7 @@
 .container-slider {
     height: 90vh;
     position: relative;
-    overflow: hidden;
+    overflow: scroll;
   }
   .slide {
     width: -webkit-fill-available;
@@ -53,10 +53,9 @@
   }
   
   .container-dots {
-    position: absolute;
+    position: relative;
     bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
+    justify-content: center;
     display: flex;
   }
   .dot {

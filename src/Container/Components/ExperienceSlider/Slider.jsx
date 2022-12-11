@@ -43,7 +43,8 @@ export default function Slider() {
     }
 
     return (
-        <div className="container-slider">
+        <>
+        <div className="container-slider text-left">
             {dataSlider.map((obj, index) => {
                 return (
                     <div
@@ -57,14 +58,15 @@ export default function Slider() {
             <BtnSlider moveSlide={nextSlide} direction={"next"} />
             <BtnSlider moveSlide={prevSlide} direction={"prev"}/>
 
-            <div className="container-dots">
-                {Array.from({length: dataSlider.length}).map((item, index) => (
-                    <div 
-                    onClick={() => moveDot(index + 1)}
-                    className={slideIndex === index + 1 ? "dot active" : "dot"}
-                    ></div>
-                ))}
-            </div>
         </div>
+        <div className="container-dots">
+            {Array.from({length: dataSlider.length}).map((item, index) => (
+                <div 
+                onClick={() => moveDot(index + 1)}
+                className={slideIndex === index + 1 ? "dot active" : "dot"}
+                ></div>
+            ))}
+        </div>
+        </>
     )
 }

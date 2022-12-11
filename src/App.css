@@ -30,15 +30,15 @@ body {
   background-color: #f5f5f5;
 }
 .page {
-  height: 100vh;
+  height: auto;
   width: -webkit-fill-available;
   padding: 24px;
 }
-@media only screen and (max-width: 870px) {
+@media only screen and (min-width: 870px) {
   .page {
-    height: auto;
+    height: 100vh;
     text-align: -webkit-center;
-    padding: 16px;
+    padding: 24px;
   }
 }
 .skillbar-percent {

@@ -4,7 +4,7 @@ export default function ExperienceCard ({props}) {
         <div className="display-flex flex-col">
             <div className="display-flex flex-row">
                 <div className="basis-96 company_logo mb-10"><img className="" src={props.logo} width='360px' height='80px' alt="company_logo"/></div>
-                <div className='flex-1'>
+                <div className='flex-1 text-left'>
                     <div>Company Name : {props.name}</div><br />
                     <div>Location : 
                         <a
